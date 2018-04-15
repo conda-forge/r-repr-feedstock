@@ -17,13 +17,17 @@ build:
     - lib/R/lib/
     - lib/
 
-requirements:  # [not win32]
-  build:  # [not win32]
-    - r-base  # [not win32]
+requirements:
+  build:
+    - r-base
     - posix  # [win64]
     - m2-git  # [win64]
-  run:  # [not win32]
-    - r-base  # [not win32]
+    - r-htmltools
+    - r-base64enc
+  run:
+    - r-base
+    - r-htmltools
+    - r-base64enc
 
 test:
   commands:
