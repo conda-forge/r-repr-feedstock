@@ -14,14 +14,16 @@ Summary: String and binary representations of objects for several formats / mime
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-repr-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-repr-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-repr-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-repr-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-repr-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-repr-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-repr-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-repr-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-repr-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-repr-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-repr-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-repr-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-repr/badges/version.svg)](https://anaconda.org/conda-forge/r-repr)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-repr/badges/downloads.svg)](https://anaconda.org/conda-forge/r-repr)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--repr-green.svg)](https://anaconda.org/conda-forge/r-repr) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-repr.svg)](https://anaconda.org/conda-forge/r-repr) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-repr.svg)](https://anaconda.org/conda-forge/r-repr) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-repr.svg)](https://anaconda.org/conda-forge/r-repr) |
 
 Installing r-repr
 =================
