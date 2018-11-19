@@ -20,8 +20,6 @@ build:
 requirements:
   build:
     - r-base
-    - posix  # [win64]
-    - m2-git  # [win64]
     - r-htmltools
     - r-base64enc
   run:
@@ -31,12 +29,11 @@ requirements:
 
 test:
   commands:
-    - R -e "library('repr')"  # [not win]
-    - R -e \"library('repr')\"  # [win]
+    - R -e "library('repr')"
 
 about:
   home: https://github.com/IRkernel/repr
-  license: GPL-3
+  license: GPL-3.0
   summary: 'String and binary representations of objects for several formats / mime types.'
 
 extra:
