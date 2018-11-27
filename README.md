@@ -3,7 +3,7 @@ About r-repr
 
 Home: https://github.com/IRkernel/repr
 
-Package license: GPL-3
+Package license: GPL-3.0
 
 Feedstock license: BSD 3-Clause
 

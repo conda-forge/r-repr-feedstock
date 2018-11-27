@@ -1,4 +1,4 @@
-{% set version = "0.17" %}
+{% set version = "0.18" %}
 
 package:
   name: r-repr
@@ -7,7 +7,7 @@ package:
 source:
   fn: r-repr-{{ version }}.tar.gz
   url: https://github.com/IRkernel/repr/archive/{{ version }}.tar.gz
-  sha256: c976a0bf025abfee45b2f98ae55cb097a4573c76ad62b21fc3d95cf2f575487c
+  sha256: 48d01a5381d528731b024ad389e000b82681c2d50fb34dbc997449b29afc66e9
 
 build:
   noarch: generic
