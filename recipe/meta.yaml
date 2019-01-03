@@ -1,13 +1,14 @@
-{% set version = "0.19" %}
+{% set version = '0.19.1' %}
 
 package:
   name: r-repr
   version: {{ version }}
 
 source:
-  fn: r-repr-{{ version }}.tar.gz
-  url: https://github.com/IRkernel/repr/archive/{{ version }}.tar.gz
-  sha256: aeb22b84fda9043f6c263a9c886f80b77a55a0537d115c5775552cc76de372c6
+  url:
+    - {{ cran_mirror }}/src/contrib/repr_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/repr/repr_{{ version }}.tar.gz
+  sha256: 162c01e973bfc82e524999bc7b3d7b2b8152c4ac7aafb1eb162c6734040cc22e
 
 build:
   noarch: generic
@@ -18,23 +19,26 @@ build:
     - lib/
 
 requirements:
-  build:
+  host:
     - r-base
-    - r-htmltools
     - r-base64enc
+    - r-htmltools
+    - r-jsonlite
   run:
     - r-base
-    - r-htmltools
     - r-base64enc
+    - r-htmltools
+    - r-jsonlite
 
 test:
   commands:
     - R -e "library('repr')"
 
 about:
-  home: https://github.com/IRkernel/repr
+  home: https://CRAN.R-project.org/package=repr
   license: GPL-3.0
-  summary: 'String and binary representations of objects for several formats / mime types.'
+  license_family: GPL3
+  summary: String and binary representations of objects for several formats / mime types.
 
 extra:
   recipe-maintainers:
