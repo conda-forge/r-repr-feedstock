@@ -1,9 +1,11 @@
+<!--
+# -*- mode: jinja -*-
+-->
+
 About r-repr
 ============
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
-
-Home: https://github.com/IRkernel/repr
+Home: https://CRAN.R-project.org/package=repr
 
 Package license: GPL-3.0
 
@@ -50,6 +52,8 @@ conda search r-repr --channel conda-forge
 
 About conda-forge
 =================
+
+[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
