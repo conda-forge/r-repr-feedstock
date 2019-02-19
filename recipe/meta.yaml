@@ -1,4 +1,4 @@
-{% set version = '0.19.1' %}
+{% set version = "0.19.2" %}
 
 package:
   name: r-repr
@@ -8,11 +8,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/repr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/repr/repr_{{ version }}.tar.gz
-  sha256: 162c01e973bfc82e524999bc7b3d7b2b8152c4ac7aafb1eb162c6734040cc22e
+  sha256: dd4d766d95e8e75f90c05e50e44e759139a47b1477748f4cf9683d35a7fa10d6
 
 build:
   noarch: generic
-  number: 1000
+  number: 0
   script: R CMD INSTALL --build .
   rpaths:
     - lib/R/lib/
