@@ -1,4 +1,4 @@
-{% set version = "0.19.2" %}
+{% set version = "1.0.0" %}
 
 package:
   name: r-repr
@@ -8,7 +8,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/repr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/repr/repr_{{ version }}.tar.gz
-  sha256: dd4d766d95e8e75f90c05e50e44e759139a47b1477748f4cf9683d35a7fa10d6
+  sha256: 98b2eb1058c1cb2caa8f98708b63726f5564b45de03d38b95ff6b963a8261f49
 
 build:
   noarch: generic
