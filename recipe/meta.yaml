@@ -1,45 +1,76 @@
-{% set version = "0.19.2" %}
+{% set version = '1.0.0' %}
+{% set posix = 'm2-' if win else '' %}
+{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-repr
-  version: {{ version }}
+  version: {{ version|replace("-", "_") }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/repr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/repr/repr_{{ version }}.tar.gz
-  sha256: dd4d766d95e8e75f90c05e50e44e759139a47b1477748f4cf9683d35a7fa10d6
+  sha256: 98b2eb1058c1cb2caa8f98708b63726f5564b45de03d38b95ff6b963a8261f49
 
 build:
-  noarch: generic
+  merge_build_host: True  # [win]
   number: 0
+  noarch: generic
   script: R CMD INSTALL --build .
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
+  build:
+    - {{posix}}zip               # [win]
   host:
     - r-base
     - r-base64enc
     - r-htmltools
     - r-jsonlite
+    - r-pillar
   run:
     - r-base
     - r-base64enc
     - r-htmltools
     - r-jsonlite
+    - r-pillar
 
 test:
   commands:
-    - R -e "library('repr')"
+    - $R -e "library('repr')"           # [not win]
+    - "\"%R%\" -e \"library('repr')\""  # [win]
 
 about:
   home: https://CRAN.R-project.org/package=repr
-  license: GPL-3.0
-  license_family: GPL3
+  license: GPL-3
   summary: String and binary representations of objects for several formats / mime types.
+  license_family: GPL3
+  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
+    - conda-forge/r
     - ocefpaf
+
+# Package: repr
+# Title: Serializable Representations
+# Version: 1.0.0
+# Authors@R: c( person('Philipp', 'Angerer', email = 'phil.angerer@gmail.com', role = c('aut', 'cre'), comment = c(ORCID = "0000-0002-0369-2888")), person('Thomas', 'Kluyver', email = 'thomas@kluyver.me.uk', role = 'aut'), person('Jan', 'Schulz', email = 'jasc@gmx.net', role = 'aut'), person('abielr', role = 'ctb'), person('Denilson', 'Figueiredo de Sa', role = 'ctb'), person('Jim', 'Hester', role = 'ctb'), person('karldw', role = 'ctb'), person('Dave', 'Foster', role = 'ctb'), person('Carson', 'Sievert', role = 'ctb') )
+# Maintainer: Philipp Angerer <phil.angerer@gmail.com>
+# Description: String and binary representations of objects for several formats / mime types.
+# Depends: R (>= 3.0.1)
+# Imports: utils, grDevices, htmltools, jsonlite, pillar, base64enc
+# Suggests: methods, highr, Cairo, stringr, testthat, diffobj, leaflet
+# Enhances: data.table, dplyr, htmlwidgets, vegalite, plotly, geojsonio
+# License: GPL-3
+# LazyData: true
+# Encoding: UTF-8
+# Collate: 'generics.r' 'options.r' 'package.r' 'repr_datatable.r' 'repr_datetime.r' 'utils.r' 'repr_list.r' 'repr_vector.r' 'repr_factor.r' 'repr_function.r' 'repr_help_files_with_topic.r' 'repr_htmlwidget.r' 'repr_matrix_df.r' 'repr_packageIQR.r' 'repr_plotly.r' 'repr_recordedplot.r' 'repr_spatial.r' 'repr_ts.r' 'repr_vega.r'
+# RoxygenNote: 6.1.1
+# NeedsCompilation: no
+# Packaged: 2019-04-29 15:50:36 UTC; angerer
+# Author: Philipp Angerer [aut, cre] (<https://orcid.org/0000-0002-0369-2888>), Thomas Kluyver [aut], Jan Schulz [aut], abielr [ctb], Denilson Figueiredo de Sa [ctb], Jim Hester [ctb], karldw [ctb], Dave Foster [ctb], Carson Sievert [ctb]
+# Repository: CRAN
+# Date/Publication: 2019-04-29 16:50:03 UTC
