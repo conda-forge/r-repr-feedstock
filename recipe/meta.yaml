@@ -29,13 +29,13 @@ requirements:
     - r-base64enc
     - r-htmltools
     - r-jsonlite
-    - r-pillar
+    - r-pillar >=1.4.0
   run:
     - r-base
     - r-base64enc
     - r-htmltools
     - r-jsonlite
-    - r-pillar
+    - r-pillar >=1.4.0
 
 test:
   commands:
