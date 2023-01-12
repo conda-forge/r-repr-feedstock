@@ -1,4 +1,4 @@
-{% set version = "1.1.4" %}
+{% set version = "1.1.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/repr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/repr/repr_{{ version }}.tar.gz
-  sha256: 6f799ca83e0940618dd8c22e62ffdce5ec11ba3366c5306ae58b55b53c097040
+  sha256: 8cc9071446553affbdf58f9106f34c409d797cbda20b3cdf6b95350dd2095efa
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   script: R CMD INSTALL --build .
   rpaths:
