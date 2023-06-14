@@ -1,11 +1,11 @@
-About r-repr
-============
+About r-repr-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-repr-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=repr
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-repr-feedstock/blob/main/LICENSE.txt)
 
 Summary: String and binary representations of objects for several formats / mime types.
 
